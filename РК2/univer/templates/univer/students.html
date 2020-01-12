@@ -1,0 +1,46 @@
+{#{% load static %}#}
+{##}
+{#<html>#}
+{#    <head>#}
+{#        <title>Univer</title>#}
+{#        <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">#}
+{#        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">#}
+{#        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">#}
+{#        <link rel="stylesheet" href="{% static 'css/univer.css' %}">#}
+{#    </head>#}
+{#    <body>#}
+{#        <div class="page-header">#}
+{#            <h1><a href="/">Univer</a></h1>#}
+{#        </div>#}
+{##}
+{#        <div class="content container">#}
+{#            <div class="row">#}
+{#                <div class="col-md-8">#}
+{#                    {% for grp in grps %}#}
+{#                        <div class="group">#}
+{#                            <h1><a href="">{{ grp.name }}</a></h1>#}
+{#                            <p>{{ grp.text|linebreaksbr }}</p>#}
+{#                        </div>#}
+{#                    {% endfor %}#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
+{#    </body>#}
+{#</html>#}
+
+{% for student in students %}
+       <div>
+           Group: {{ student.group.name }}
+       </div>
+       <div>
+           Quantity of students: {{ student.group.qnt_of_students }}
+       </div>
+       <div>
+           Surname: {{ student.surname }}
+       </div>
+       <div>
+           Name: {{ student.name }}
+       </div>
+
+       <hr style="height: 2px; background-color: black">
+   {% endfor %}
