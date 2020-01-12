@@ -1,0 +1,12 @@
+<form method="POST">
+   {% csrf_token %}
+   <label>
+       Логин:
+       <input type="text" name="username">
+   </label>
+   <label>
+       Пароль:
+       <input type="password" name="password">
+   </label>
+   <button type="submit">Авторизоваться</button>
+</form>
